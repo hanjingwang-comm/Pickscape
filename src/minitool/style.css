@@ -1,0 +1,157 @@
+/* Local Chrome 61 baselines. Original modern styles enhance these where supported. */
+html,
+body,
+#root {
+  height: 100%;
+  min-width: 0;
+}
+html {
+  touch-action: manipulation;
+}
+body {
+  -webkit-touch-callout: none;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #647c6b;
+  outline-offset: 2px;
+}
+img {
+  max-width: 100%;
+}
+.app {
+  height: 100vh;
+  height: var(--app-height, 100vh);
+}
+.app-header {
+  padding-top: 0;
+  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+}
+.studio {
+  height: calc(100vh - 76px);
+  height: calc(var(--app-height, 100vh) - 76px);
+}
+.toolbar {
+  bottom: 16px;
+  margin-bottom: 0;
+  margin-bottom: var(
+    --safe-area-inset-bottom,
+    env(safe-area-inset-bottom, 0px)
+  );
+}
+.inspector,
+.scene-panel,
+.gallery-page,
+.modal {
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+  min-width: 0;
+}
+.modal {
+  width: 90%;
+  max-width: 760px;
+  max-height: 88vh;
+}
+.model-thumbnail {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+}
+.photo-image {
+  height: 230px;
+}
+.photo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scene-mini {
+  height: 62px;
+}
+:not(.supports-flex-gap) .inventory-tabs > * + *,
+:not(.supports-flex-gap) .toolbar > * + *,
+:not(.supports-flex-gap) .header-actions > * + *,
+:not(.supports-flex-gap) .object-actions > * + * {
+  margin-left: 6px;
+}
+:not(.supports-flex-gap) .panel-launchers > * + *,
+:not(.supports-flex-gap) .scene-options > * + * {
+  margin-top: 6px;
+}
+.reference-photo img {
+  max-height: 48vh;
+}
+.mini-fallback {
+  height: 100%;
+  padding: 100px 100px 90px;
+  overflow: auto;
+}
+.mini-fallback h2 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+.mini-fallback button {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 4px;
+  padding: 8px;
+}
+.mini-fallback p {
+  font-size: 13px;
+  margin: 10px 0;
+}
+.mini-map {
+  position: relative;
+  height: 280px;
+  background: #c6c7a1;
+  border: 1px solid #899174;
+  border-radius: 12px;
+}
+.mini-map button {
+  position: absolute;
+  max-width: 95px;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+}
+@media (max-width: 700px) {
+  .studio {
+    height: calc(var(--app-height, 100vh) - 68px);
+  }
+  .inspector {
+    width: calc(100vw - 88px);
+    max-width: 310px;
+  }
+  .scene-panel {
+    width: calc(100vw - 88px);
+    max-width: 292px;
+  }
+  .mini-fallback {
+    padding: 170px 76px 90px;
+  }
+  .modal {
+    width: 94%;
+  }
+}
+@media (max-width: 460px) {
+  .studio {
+    height: calc(var(--app-height, 100vh) - 101px);
+  }
+}
+.list-pages {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+.list-pages button {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+}
+dialog {
+  width: 90%;
+  max-width: 760px;
+}

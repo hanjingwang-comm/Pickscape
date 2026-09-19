@@ -1,0 +1,22 @@
+node_modules/
+dist/
+work/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.yidu-generation/
+dist-minitool/
+output/
+*.zip
+*.pickscape
+*.yidu
+.DS_Store
+*.log
+coverage/
+.venv/
+__pycache__/
+# Local handoff notes contain machine-specific paths and project snapshots.
+HANDOFF.md
+MINITOOL-AUDIT.md
+PRD.md
